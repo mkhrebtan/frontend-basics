@@ -1,0 +1,92 @@
+:root {
+    --square-size: 150px;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    min-height: 150px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+    table-layout: fixed;
+}
+
+tr,
+td {
+    border: 2px solid black;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+tr:first-child {
+    background-color: #088f8f;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+tr:first-child:hover {
+    background-color: #f77070;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f508;
+    font-weight: bold;
+}
+
+tr:nth-child(even):hover {
+    background-color: #0a0af7;
+}
+
+.image-task {
+    margin: 50px;
+}
+
+.square {
+    width: var(--square-size);
+    height: var(--square-size);
+    border-radius: 15%;
+    border: 5px solid black;
+}
+
+.square.back {
+    background-color: #d89658;
+}
+
+.square.front {
+    background-color: rgba(121, 48, 35, 0.6);
+}
+
+.image-position {
+    position: relative;
+}
+
+.square.position.back {
+    position: absolute;
+}
+
+.square.position.front {
+    position: absolute;
+    top: calc(var(--square-size) / 2);
+    left: calc(var(--square-size) / 2);
+}
+
+.image-transform {
+    position: relative;
+    margin-left: calc(var(--square-size) * 2);
+}
+
+.square.transform.back {
+    position: relative;
+}
+
+.square.transform.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(calc(var(--square-size) / 2), calc(var(--square-size) / 2));
+}
