@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex: 1;
+}
+
+#main-content {
+    flex: 8;
+    display: flex;
+}
+
+.content.side {
+    flex: 7;
+}
+
+.content.center {
+    flex: 11;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
