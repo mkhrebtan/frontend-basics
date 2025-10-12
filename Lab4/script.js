@@ -21,6 +21,8 @@ function getRandomColor() {
 }
 
 let imageCount = 1;
+let initialWidth = document.getElementById('city-image-1').width;
+let initialHeight = document.getElementById('city-image-1').height;
 
 function addImage() {
     const img = document.createElement('img');
@@ -28,6 +30,8 @@ function addImage() {
     img.src = existingImg.src;
     img.alt = existingImg.alt;
     img.id = `city-image-${++imageCount}`;
+    img.style.width = initialWidth + 'px';
+    img.style.height = initialHeight + 'px';
 
     const cityLink = document.getElementById('city-link-1');
     const cityLinkClone = cityLink.cloneNode(false);
